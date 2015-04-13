@@ -17,7 +17,7 @@ public class MyApplication extends Application {
      */
     private WindowManager.LayoutParams wmParams = new WindowManager.LayoutParams();
 
-    public WindowManager.LayoutParams getMywmParams() {
+    public WindowManager.LayoutParams getMyLayoutParams() {
         return wmParams;
     }
 }

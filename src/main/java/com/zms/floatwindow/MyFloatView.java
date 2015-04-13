@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.WindowManager;
+import android.view.WindowManager.LayoutParams;
 import android.widget.ImageView;
 
 /**
@@ -17,15 +18,14 @@ public class MyFloatView extends ImageView {
     private float y;
 
     private WindowManager wm = (WindowManager) getContext().getApplicationContext()
-            .getSystemService("window");
+            .getSystemService(Context.WINDOW_SERVICE);
 
-    //此wmParams为获取的全局变量，用以保存悬浮窗口的属性
-    private WindowManager.LayoutParams wmParams = ((MyApplication) getContext().getApplicationContext())
-            .getMywmParams();
+    // 此wmParams为获取的全局变量，用以保存悬浮窗口的属性
+    private LayoutParams wmParams = ((MyApplication) getContext().getApplicationContext())
+            .getMyLayoutParams();
 
     public MyFloatView(Context context) {
         super(context);
-        // TODO Auto-generated constructor stub
     }
 
     @Override
